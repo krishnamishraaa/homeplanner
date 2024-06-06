@@ -3,6 +3,14 @@ from flask_restful import Resource,Api
 api=Api(prefix="/api")
 
 
+class Test(Resource):
+
+    def get(self):
+        a = 20
+        b = 5461
+        return a+b, 200
+
+
 #get inventory
 #post inventory
 #update inventory
@@ -25,3 +33,4 @@ api=Api(prefix="/api")
 #update weekend task
 
 
+api.add_resource(Test, '/test')

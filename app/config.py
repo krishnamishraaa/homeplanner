@@ -12,3 +12,19 @@ class DevelopmentConfig(Config):
     SQLALCHEMNY_TRACK_MODIFICATION  = False
     WTF_CSRF_ENABLED = False
     
+
+class TestingConfig(Config):
+    DEBUG = True
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
+    SECRET_KEY = "debugkeyistruehowcanitbefalse"
+    SECURITY_PASSWORD_SALT = "saltedthepasswordsforsecurity"
+    SQLALCHEMNY_TRACK_MODIFICATION  = False
+    WTF_CSRF_ENABLED = False
+    
+class ProductionConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
+    SECRET_KEY = "debugkeyistruehowcanitbefalse"
+    SECURITY_PASSWORD_SALT = "saltedthepasswordsforsecurity"
+    SQLALCHEMNY_TRACK_MODIFICATION  = False
+    WTF_CSRF_ENABLED = False
