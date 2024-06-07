@@ -2,6 +2,7 @@ from flask import Flask, Blueprint
 from .config import DevelopmentConfig
 from .resources import api
 from .views import view
+from flask_cors import CORS
 
 # role based auth token 
 # blueprint globally
@@ -22,6 +23,6 @@ def create_app():
 
     app.register_blueprint(view, url_prefix="/")
 
-    
+    CORS(app)
 
     return app
