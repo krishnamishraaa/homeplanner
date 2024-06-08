@@ -6,9 +6,10 @@ api=Api(prefix="/api")
 class Test(Resource):
 
     def get(self):
-        a = 30
+        a = 40
         b = 5461
         return a+b, 200
+        # return "Hi Souvik!!", 200
 
 
 #get inventory

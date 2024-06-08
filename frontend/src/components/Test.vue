@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const count = ref(0)
 
 const data = ref('')
 
