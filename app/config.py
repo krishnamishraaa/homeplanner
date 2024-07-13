@@ -12,6 +12,7 @@ class DevelopmentConfig(Config):
     SQLALCHEMNY_TRACK_MODIFICATION  = False
     WTF_CSRF_ENABLED = False
     
+    
 
 class TestingConfig(Config):
     DEBUG = True
